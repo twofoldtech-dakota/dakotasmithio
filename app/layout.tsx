@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { Inter, Roboto_Mono } from "@next/font/google";
+import { Footer } from "./footer";
 import "./globals.css";
 import { Header } from "./header";
 
@@ -53,8 +54,10 @@ export default function RootLayout({
       <head />
       <body>
         <Header />
-        <Container>{children}</Container>
-        <footer />
+        <Container className="h-screenHeightWithoutHeader min-h-screenHeightWithoutHeader">
+          {children}
+        </Container>
+        <Footer />
       </body>
     </html>
   );

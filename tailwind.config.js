@@ -22,10 +22,17 @@ module.exports = {
         lighter_black: "#333",
         light_black: "#111",
         black: "#000",
+        green: "#00e676",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
+      },
+      minHeight: {
+        screenHeightWithoutHeader: "calc(100vh - 101px)",
+      },
+      height: {
+        screenHeightWithoutHeader: "calc(100vh - 101px)",
       },
     },
   },
