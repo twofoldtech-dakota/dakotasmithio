@@ -1,5 +1,7 @@
+import { Container } from "@/components/container";
 import { Inter, Roboto_Mono } from "@next/font/google";
-import "../styles/globals.css";
+import "./globals.css";
+import { Header } from "./header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,6 +15,34 @@ const roboto_mono = Roboto_Mono({
   display: "optional",
 });
 
+export const metadata = {
+  title: {
+    default: "Dakota Smith",
+    template: "%s | Dakota Smith",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Dakota Smith",
+    card: "summary_large_image",
+  },
+  icons: {
+    shortcut: "/favicon.ico",
+  },
+  verification: {
+    // google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
+    // yandex: '14d2e73487fa6c71',
+  },
+};
 export default function RootLayout({
   children,
 }: {
@@ -21,7 +51,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
       <head />
-      <body>{children}</body>
+      <body>
+        <Header />
+        <Container>{children}</Container>
+        <footer />
+      </body>
     </html>
   );
 }
