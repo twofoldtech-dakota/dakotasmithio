@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="">
-      <h1 className="text-2xl">home page</h1>
+    <main className="pt-18">
+      <h1>Full-stack web dev</h1>
     </main>
   );
 }

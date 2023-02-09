@@ -20,7 +20,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-10 w-full bg-black py-6">
+      <header className="sticky top-0 z-10 w-full py-6 backdrop-blur-lg">
         <Container className="flex items-center justify-between">
           <Link href="/" className="text-3xl font-bold">
             Dakota<span className="text-green">.</span>
@@ -58,7 +58,7 @@ export const Header = () => {
           </a>
           <button
             className="block text-4xl md:hidden"
-            onClick={() => setOpen(open)}
+            onClick={() => setOpen(open ? false : true)}
           >
             <MenuIcon />
           </button>

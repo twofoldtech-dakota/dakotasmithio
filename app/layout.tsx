@@ -54,7 +54,7 @@ export default function RootLayout({
       <head />
       <body>
         <Header />
-        <Container className="h-screenHeightWithoutHeader min-h-screenHeightWithoutHeader">
+        <Container className="mt-16 h-screenHeightWithoutHeader min-h-screenHeightWithoutHeader">
           {children}
         </Container>
         <Footer />
