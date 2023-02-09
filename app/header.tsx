@@ -1,16 +1,13 @@
 "use client";
 import { Container } from "@/components/container";
 import { GitHubIcon, MenuIcon } from "@/components/icons";
-import { MobileNav } from "@/components/mobile-nav";
 import clsx from "clsx";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -20,12 +17,12 @@ export const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-10 w-full py-6 backdrop-blur-lg">
-        <Container className="flex items-center justify-between">
+      <header className="fixed top-0 z-10 w-full pt-6 backdrop-blur-lg">
+        <Container className="flex items-center justify-between border-b border-lighter_black pb-6">
           <Link href="/" className="text-3xl font-bold">
             Dakota<span className="text-green">.</span>
           </Link>
-          <nav className="hidden md:block">
+          <nav>
             <div className="rounded-full border border-white p-1 text-lg">
               <ul className="flex">
                 {links.map((link) => (
@@ -56,15 +53,15 @@ export const Header = () => {
           >
             <GitHubIcon />
           </a>
-          <button
+          {/* <button
             className="block text-4xl md:hidden"
             onClick={() => setOpen(open ? false : true)}
           >
             <MenuIcon />
-          </button>
+          </button> */}
         </Container>
       </header>
-      <MobileNav open={open} />
+      {/* <MobileNav open={open} /> */}
     </>
   );
 };

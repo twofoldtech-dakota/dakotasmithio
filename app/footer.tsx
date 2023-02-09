@@ -3,7 +3,7 @@ import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/icons";
 
 export const Footer = () => (
   <Container>
-    <footer className="w-full border-t border-white py-6 text-center text-lg text-gray-500">
+    <footer className="w-full border-t border-lighter_black py-6 text-center text-lg text-gray-500">
       <p className="pb-3">Connect</p>
       <ul className="flex justify-center">
         <li className="px-2">

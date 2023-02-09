@@ -29,10 +29,13 @@ module.exports = {
         mono: ["var(--font-roboto-mono)"],
       },
       minHeight: {
-        screenHeightWithoutHeader: "calc(100vh - 101px)",
+        screenHeightWithoutHeader: "calc(100vh - 100px)",
       },
       height: {
-        screenHeightWithoutHeader: "calc(100vh - 101px)",
+        screenHeightWithoutHeader: "calc(100vh - 100px)",
+      },
+      height: {
+        screenHeightWithoutHeaderShort: "calc(100vh - 163px)",
       },
     },
   },
